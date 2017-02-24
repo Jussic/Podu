@@ -8,11 +8,18 @@
 </head>
 <body>
   
-<!-- When a user signs in or out -->
-    
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
+<!-- Notice for when a user signs in or out success or !success-->
+<!-- Depends when to show the alert --> 
 
+<% if alert %>
+  <p class="alert">
+    <%= alert %>
+  </p>
+<% elsif notice %>  
+  <p class="notice">
+    <%= notice %>
+  </p>
+<% end %>
 
 <%= yield %>
 
