@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Podu</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+
+<body>
+    <header class = "cf" id = "main-header">
+        <div class = "wrapper-wide">
+            <a href = "index.html" id="logo"> Podu</a>
+        <nav>
+            <ul class = "nav_ban">
+                <li><a href= "podcasts.html"> Explore</a></li>
+                <li><a href= "sign_in.html"> Sign In</a></li>
+                <li><a href= "sign_up.html"> Create a Podcast </a></li>
+            </ul>
+        </nav> 
+        </div>
+    </header>
+    
+    <div id = "banner" class = "podcasts_banner"> 
+        <h1> Discover your new favorite podcasts! </h1> 
+    </div> 
+    
+    <div id = "podcasts" class = "cf"> 
+        <div class = "wrapper">
+        <ul>
+        <a href = "podcasts.html">
+        <li> 
+        <img src = "image_tag(1.jpg)"  alt="Tech Podcast Image"> 
+        <div class = "podcast_overview">
+            <h2> Podcast One </h2>
+            <p class = "episode_count" >1 Episode </p>   
+        </div>
+        </li>
+        </a>
+        
+         <a href = "podcasts.html">
+        <li> 
+        <img src = "image_tag(1.jpg)"  alt="Tech Podcast Image"> 
+        <div class = "podcast_overview">
+            <h2> Podcast One </h2>
+            <p class = "episode_count" >1 Episode </p>   
+        </div>
+        </li>
+        </a>
+        
+         <a href = "podcasts.html">
+        <li> 
+        <img src = "image_tag(1.jpg)"  alt="Tech Podcast Image"> 
+        <div class = "podcast_overview">
+            <h2> Podcast One </h2>
+            <p class = "episode_count" >1 Episode </p>   
+        </div>
+        </li>
+        </a>
+        
+         <a href = "#">
+        <li> 
+        <img src = "image_tag(1.jpg)"  alt="Tech Podcast Image"> 
+        <div class = "podcast_overview">
+            <h2> Podcast One </h2>
+            <p class = "episode_count" >1 Episode </p>   
+        </div>
+        </li>
+        </a>
+        
+         <a href = "#">
+        <li> 
+        <img src = "image_tag(1.jpg)"  alt="Tech Podcast Image"> 
+        <div class = "podcast_overview">
+            <h2> Podcast One </h2>
+            <p class = "episode_count" >1 Episode </p>   
+        </div>
+        </li>
+        </a>
+    </ul>
+    </div>  
+    </div> 
+    
+    <div class = "pagination">
+        <span class = "previous_page disabled"> Previous </span>
+        <em class= "current"> 1 </em>
+        <a href="#"> 2 </a>
+        <a class = "next_page" href="#">Next </a>
+    </div>
+</body>
+</html>
