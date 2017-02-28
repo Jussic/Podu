@@ -1,11 +1,15 @@
 #background {
-background-image: url('https://static.pexels.com/photos/126313/pexels-photo-126313.jpeg');
+background-image:url('https://static.pexels.com/photos/126313/pexels-photo-126313.jpeg');
 height: 100vh;
 background-size: cover;
 background-position: center;
 text-align: center; 
 
 header {
+        padding: 0;
+        height: 20r;
+        overflow: hidden;
+        background-color: #d2674e;
 padding: 3rem 0;
      #logo {
          float: left;
