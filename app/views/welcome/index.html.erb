@@ -10,7 +10,8 @@
                 <li><%= link_to "Create a Podcast", new_podcast_registration_path %></li>
                  <% else %>
                     <li> <a href ="#"> Dashboard </a></li>
-                    <li> <a href= "#"> Explore</a></li>
+                    <li><%= link_to "Explore", podcasts_path %></li>
+                    
                     <li><%= link_to "Sign Out", destroy_podcast_session_path, method: :delete %></li>
                 <% end %>
             </ul>
@@ -21,6 +22,6 @@
     <div class= "wrapper_skinny">
         <h1> Discover your new favorite <br> Podcast, or create your own.</h1>
         <%= link_to "Create a Podcast", new_podcast_registration_path, class: "button button_highlight" %>
-        <a href= "#" class = "button button_white">Explore</a>
+        <%= link_to "Explore", podcasts_path, class: "button button_white" %>
     </div>    
 </div>
