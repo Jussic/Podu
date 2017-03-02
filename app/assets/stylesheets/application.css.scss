@@ -1,5 +1,5 @@
 $white: #FFFFFF;
-$highlight: #d2674e;
+$highlight: #ffea6a;
 $dark: #22292e;
 
 .wrapper_wide {
@@ -61,7 +61,7 @@ $dark: #22292e;
 }
 #main_header {
     color: $dark;    
-    background: $white;
+    background: $highlight;
     padding: 2.5rem 0;
     #logo {
          float: left;

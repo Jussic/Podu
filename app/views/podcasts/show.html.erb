@@ -3,7 +3,7 @@
         <div class = "wrapper_skinny"> 
             <h1> <%= @podcast.title %> </h1>
             <p class= "description"> <%= @podcast.description %> </p>
-            <!-- Ruby to show the subscribe links if provided -->
+             Ruby to show the subscribe links if provided 
             <% unless @podcast.itunes.blank? %>
                 <a href = "<%= @podcast.itunes %>" class ="subscribe_link"> iTunes</a>
             <% end %>    
@@ -22,7 +22,7 @@
         <% end %>
         </div>
         
-        
+                
         <div id = "episodes">
             <div class = "wrapper_skinny">
                 <ul class = "cf">

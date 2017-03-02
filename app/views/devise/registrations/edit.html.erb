@@ -1,5 +1,13 @@
 <div id = "podcast_show"> 
-        <div id = "show_banner">
+        <head>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+        </head>
+        <br> <br> 
+        <center> 
+        <img id="imageToSwap" class="profile" src="https://www.thelifestylerenovation.com/wp-content/uploads/slide-toneup-8weeks-background1.jpg;">
+        </center>
+        
+        <div id = "#">
         <div class = "wrapper_skinny"> 
             <h1> The Tech Bytes Dashboard </h1>
         </div>
@@ -16,12 +24,23 @@
                </ul> 
          </div>
       </div>
+      
+    
 
 <div id = "form">
       <div class = "wrapper_skinny"> 
     <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
       <%= devise_error_messages! %>
       
+        <h3> Select a Image from the dropdown </h3>   
+        <select onchange="$('#imageToSwap').attr('src', this.options[this.selectedIndex].value);">
+            <option value="https://linkedinimagesdotcom.files.wordpress.com/2016/04/texture_pencils_01_1400x425.jpg" selected>Art</option>
+            <option value="http://cdn.wallpapersafari.com/70/18/L37Y9l.jpg">Technology</option>
+            <option value="https://www.thelifestylerenovation.com/wp-content/uploads/slide-toneup-8weeks-background1.jpg">Health</option>
+        </select>
+          
+        <br><br>
+        
         <div class="field">
         <%= f.label :title %><br />
         <%= f.text_field :title, autofocus: true %>
