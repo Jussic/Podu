@@ -17,9 +17,20 @@
         </div>
         <div id = "breadcrumb"> 
         <%= link_to podcasts_path do %> 
-        All Podcasts <span> / </span> 
-        The Tech Bytes
+        All Podcasts 
+        <span> / </span> 
+        <%= link_to @podcast.title, podcast_path(@podcast) %> 
+        <span> / </span> 
+        <%= @episode.title %>
         <% end %>
+        </div>
+        
+        <div id = "episode_content"> 
+        <div class= "wrapper_skinny">
+            <img src = "https://images.pexels.com/photos/227294/pexels-photo-227294.jpeg?w=1260&h=750&auto=compress&cs=tinysrgb " alt= "Picture"  
+            <h2> <%= @episode.title %> </h2>
+            <p class="description"> <%= @episode.description %> </p>
+        </div>
         </div>
         
                 
@@ -38,7 +49,7 @@
                             <p class="description"> <%= truncate(episode.description, length: 200) %></p>
                         </div>
                     </li>
-                    <% end %> 
+                    <% end %>
                 </ul>
             </div>
         </div>

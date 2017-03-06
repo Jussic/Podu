@@ -7,7 +7,8 @@ class PodcastsController < ApplicationController
     
     def show 
         @podcast = Podcast.find(params[:id])
-    rescue ActiveRecord::RecordNotFound
+        @episodes = Episode.where(podcast_id: @podcast).order("created_at DESC")
+            rescue ActiveRecord::RecordNotFound
         flash[:notice] = " We could not find that Podcast"
         redirect_to action: :index
     end
