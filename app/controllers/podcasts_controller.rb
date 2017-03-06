@@ -12,6 +12,8 @@ class PodcastsController < ApplicationController
         redirect_to action: :index
     end
     
+    # Justine Clarke | 2017
+    
     # def handle_record_not_found
     # # Send it to the view that is specific for Post not found
     # render :not_found
