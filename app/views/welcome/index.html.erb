@@ -1,4 +1,17 @@
 <div id = "background">
+    <header class = "cf"> 
+      <div class = "wrapper_wide">
+       <nav>
+           <ul>
+            <li><%= link_to "Explore", podcasts_path %></li>
+            <li><%= link_to "Sign In", new_podcast_session_path %></li>
+            <li><%= link_to "Create a Podcast", new_podcast_registration_path %></li>
+            <fb:login-button scope="public_profile,email" onlogin="checkLoginState();"> </fb:login-button>
+        </ul>
+        </nav> 
+        </div>
+    </header>
+    
     <div class= "wrapper_skinny">
         <br> <br> <br>
         <h1> Discover your new favorite <br> podcast, or create your own.</h1>
