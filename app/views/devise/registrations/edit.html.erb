@@ -50,6 +50,11 @@
         <%= f.text_area :description, autofocus: true %>
       </div>
       
+          <div class="field">
+        <%= f.label :thumbnail %><br />
+        <%= f.file_field :thumbnail, autofocus: true %>
+      </div>
+      
       <div class="field">
         <%= f.label :email %><br />
         <%= f.email_field :email %>

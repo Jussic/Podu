@@ -27,7 +27,7 @@
         
         <div id = "episode_content"> 
         <div class= "wrapper_skinny">
-            <img src = "https://images.pexels.com/photos/227294/pexels-photo-227294.jpeg?w=1260&h=750&auto=compress&cs=tinysrgb " alt= "Picture"  
+             <%= image_tag @episode.episode_thumbnail.url(:medium), class: "current_episode_thumbnail" %>
             <h2> <%= @episode.title %> </h2>
             <p class="description"> <%= @episode.description %> </p>
         </div>
@@ -41,7 +41,7 @@
                     <li class = "cf">
                         <div class = "episode_thumbnail">
                             <a href = "episode.html">
-                                <img src= "https://images.pexels.com/photos/227294/pexels-photo-227294.jpeg?w=1260&h=750&auto=compress&cs=tinysrgb" alt= "Picture of Girl">
+                            <%= image_tag @episode.episode_thumbnail.url(:medium), class: "current_episode_thumbnail" %>
                             </a>
                         </div>
                         <div class = "episode_overview">
