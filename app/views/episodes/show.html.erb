@@ -3,7 +3,7 @@
         <div class = "wrapper_skinny"> 
             <h1> <%= @podcast.title %> </h1>
             <p class= "description"> <%= @podcast.description %> </p>
-             Ruby to show the subscribe links if provided 
+             <!--Ruby to show the subscribe links if provided -->
             <% unless @podcast.itunes.blank? %>
                 <a href = "<%= @podcast.itunes %>" class ="subscribe_link"> iTunes</a>
             <% end %>    
@@ -37,13 +37,16 @@
         <div id = "episodes">
             <div class = "wrapper_skinny">
                 <ul class = "cf">
+                     
+                    <!-- Loop through the podcast episodes and gather the thumbnail for each --> 
                     <% @episodes.each do |episode| %>
                     <li class = "cf">
                         <div class = "episode_thumbnail">
-                            <a href = "episode.html">
-                            <%= image_tag @episode.episode_thumbnail.url(:medium), class: "current_episode_thumbnail" %>
+                        <a href = "episode.html">
+                            <%= image_tag episode.episode_thumbnail.url(:medium) %>
                             </a>
                         </div>
+                        
                         <div class = "episode_overview">
                             <h2> <%= link_to episode.title, podcast_episode_path(@podcast, episode) %> </h2>
                             <p class="description"> <%= truncate(episode.description, length: 200) %></p>
