@@ -14,3 +14,6 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+
+// SITE RESOURCES
+// https://stock.adobe.com/
