@@ -3,10 +3,11 @@ class PodcastsController < ApplicationController
     before_action :find_episode, only: [:show, :dashboard]
 
     def index
-        @podcasts = Podcast.all.order("created_at DESC")
+        @podcasts = Podcast.all.order("created_at DESC").paginate(:page => params[:page], :per_page => 4)
     end
     
     def show 
+        @podcast = Podcast.find params[:id] #-> id will have been sent by redirect_to @user
     end
     
     def dashboard
@@ -25,9 +26,4 @@ class PodcastsController < ApplicationController
             @podcast = Podcast.find(params[:id])
         end 
     end
-    
-    # def handle_record_not_found
-    # # Send it to the view that is specific for Post not found
-    # render :not_found
-    # end
 end

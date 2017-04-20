@@ -1,6 +1,6 @@
 class EpisodesController < ApplicationController
-    before_action :authenticate_podcast!, except: [:show]
-    before_filter :require_permission
+    before_action :authenticate_podcast!,  except: [:show],  only: [:update]
+    before_filter :require_permission, only: [:update, :edit] 
     before_action :find_podcast
     before_action :find_episode, only: [:show, :edit, :update, :destroy]
     
@@ -9,7 +9,6 @@ class EpisodesController < ApplicationController
     end
     
     # Nested route define both pod and ep and get the ids. 
-    
     def create 
         @episode = @podcast.episodes.new episode_params
         if @episode.save
@@ -19,11 +18,12 @@ class EpisodesController < ApplicationController
         end
     end
     
-    def show 
+    def show
         @episodes = Episode.where(podcast_id: @podcast).order("created_at DESC").reject { |e| e.id == @episode.id}
     end
             
     def edit 
+        
     end 
 
     
@@ -43,8 +43,10 @@ class EpisodesController < ApplicationController
     
     private
     
+    # This allows the various features
+    
     def episode_params
-        params.require(:episode).permit(:title, :description, :episode_thumbnail)
+        params.require(:episode).permit(:title, :description, :episode_thumbnail, :mp3)
     end
     
     def find_podcast
@@ -61,5 +63,4 @@ class EpisodesController < ApplicationController
             redirect_to root_path, notice: "Sorry, you are not allowed to view that page"
         end
     end
-    
 end
