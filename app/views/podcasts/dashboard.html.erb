@@ -1,7 +1,7 @@
 <div id = "podcast_show"> 
     <div class = "show_banner"> 
         <div class = "wrapper_skinny"> 
-        <h1> The Tech Bytes Dashboard </h1>
+         <h1> <%= @podcast.title %> </h1>
         </div>
      </div>
     
@@ -30,6 +30,9 @@
                             <h2> <a href <%= link_to episode.title, podcast_episode_path(@podcast, episode) %> </h2>
                             <p class="description"> <%= truncate(episode.description, length: 160) %> </p>
                             <div class = "authorized_links"> 
+                            <p> <%= @podcast.created_at.strftime("%B %d %Y, %l:%M%P") %></p>
+                                              <span class="timestamp"> Posted <%= time_ago_in_words(@podcast.created_at) %> ago. </span>
+
                             <%= link_to "Edit", edit_podcast_episode_path(@podcast, episode) %>
                             <%= link_to "Delete", podcast_episode_path(@podcast, episode), method: :delete, data: {confirm: "Are you sure?"} %>
                             </div>

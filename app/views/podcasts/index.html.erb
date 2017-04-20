@@ -1,10 +1,10 @@
 <div id = "banner" class = "podcasts_banner"> 
-        <h1> Discover your new favorite podcasts! </h1> 
+       <h1> <strong> Discover your new favorite podcasts! </strong> </h1>
     </div> 
     
     <div id = "podcasts" class = "cf"> 
         <div class = "wrapper">
-        <ul>
+        <ul class =  'cf' >
             <% @podcasts.each do |podcast| %> 
                 <%= link_to podcast do %>
                  <li> 
@@ -17,5 +17,7 @@
             <% end %> 
            <% end %> 
         </ul>
+            
+        <%= will_paginate @podcasts, previous_label: "Previous", next_label: "Next" %>
     </div>  
 </div> 

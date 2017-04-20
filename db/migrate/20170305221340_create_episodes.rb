@@ -8,5 +8,6 @@ class CreateEpisodes < ActiveRecord::Migration
       t.timestamps null: false
     end
     add_foreign_key :episodes, :podcasts
+    add_index :episodes, [:podcast_id, :created_at]
   end
 end
