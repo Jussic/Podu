@@ -7,6 +7,7 @@ class PodcastsController < ApplicationController
     end
     
     def show 
+        @podcast = Podcast.find params[:id] #-> id will have been sent by redirect_to @user
     end
     
     def dashboard
