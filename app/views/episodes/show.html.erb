@@ -8,7 +8,15 @@ return b.innerHTML='<a href="'+this._escapeHtml(a)+'">x</a>',b.firstChild.href},
       $("#jquery_jplayer_1").jPlayer({
         ready: function () {
           $(this).jPlayer("setMedia", {
+<<<<<<< HEAD
             mp3: "<%= @episode.mp3.url %>",
+=======
+<<<<<<< HEAD
+            mp3: "<%= @episode.mp3.url %>",
+=======
+          mp3:<%= @episode.mp3.url %>,
+>>>>>>> fff6b92a1fcaf5d6d9280dad65b7beab59a2444e
+>>>>>>> a4cae5f66599f2b32c6b17188c00dda731299342
       });
     },
         swfPath:"/js"
@@ -94,6 +102,10 @@ return b.innerHTML='<a href="'+this._escapeHtml(a)+'">x</a>',b.firstChild.href},
             <div class = "wrapper_skinny">
                 <ul class = "cf">
                      
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> a4cae5f66599f2b32c6b17188c00dda731299342
                     <!-- Loop through the podcast episodes and gather the thumbnail for each --> 
                     <!--<% @episodes.each do |episode| %>-->
                     <!--<li class = "cf">-->
@@ -102,6 +114,19 @@ return b.innerHTML='<a href="'+this._escapeHtml(a)+'">x</a>',b.firstChild.href},
                     <!--        <%= image_tag episode.episode_thumbnail.url(:medium) %>-->
                     <!--        </a>-->
                     <!--    </div>-->
+<<<<<<< HEAD
+=======
+=======
+                     Loop through the podcast episodes and gather the thumbnail for each 
+                    <% @episodes.each do |episode| %>
+                    <li class = "cf">
+                        <div class = "episode_thumbnail">
+                        <a href = "episode.html">
+                            <%= image_tag episode.episode_thumbnail.url(:medium) %>
+                            </a>
+                        </div>
+>>>>>>> fff6b92a1fcaf5d6d9280dad65b7beab59a2444e
+>>>>>>> a4cae5f66599f2b32c6b17188c00dda731299342
                         
                         <!--<div class = "episode_overview">-->
                         <!--    <h2> <%= link_to episode.title, podcast_episode_path(@podcast, episode) %> </h2>-->
