@@ -14,8 +14,4 @@ Rails.application.routes.draw do
   
   get '/secret', to: 'pages#secret', as: :secret
 
-<<<<<<< HEAD
 end
-=======
-end
->>>>>>> fff6b92a1fcaf5d6d9280dad65b7beab59a2444e
